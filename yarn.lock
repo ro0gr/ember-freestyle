@@ -1232,6 +1232,13 @@ broccoli-file-creator@^1.1.1:
     rsvp "~3.0.6"
     symlink-or-copy "^1.0.1"
 
+broccoli-file-creator@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/broccoli-file-creator/-/broccoli-file-creator-2.1.1.tgz#7351dd2496c762cfce7736ce9b49e3fce0c7b7db"
+  dependencies:
+    broccoli-plugin "^1.1.0"
+    mkdirp "^0.5.1"
+
 broccoli-filter@^1.2.2, broccoli-filter@^1.2.3:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/broccoli-filter/-/broccoli-filter-1.2.4.tgz#409afb94b9a3a6da9fac8134e91e205f40cc7330"
@@ -2267,7 +2274,7 @@ ember-cli-autoprefixer@^0.8.1:
     broccoli-autoprefixer "^5.0.0"
     lodash "^4.0.0"
 
-ember-cli-babel@^6.0.0-beta.4:
+ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.12.0:
   version "6.14.1"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.14.1.tgz#796339229035910b625593caffbc2683792ada68"
   dependencies:
@@ -2398,12 +2405,14 @@ ember-cli-normalize-entity-name@^1.0.0:
   dependencies:
     silent-error "^1.0.0"
 
-ember-cli-page-object@^1.13.0-alpha.1:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-page-object/-/ember-cli-page-object-1.14.0.tgz#fcf06b3b1ee6454196a29bc674abe8b65aa0adbd"
+ember-cli-page-object@san650/ember-cli-page-object:
+  version "1.15.0-beta.3"
+  resolved "https://codeload.github.com/san650/ember-cli-page-object/tar.gz/e8a2003d39218935a0ae7b2cb03054743b8cce79"
   dependencies:
+    broccoli-file-creator "^2.1.1"
+    broccoli-merge-trees "^2.0.0"
     ceibo "~2.0.0"
-    ember-cli-babel "^6.6.0"
+    ember-cli-babel "^6.12.0"
     ember-cli-node-assets "^0.2.2"
     ember-native-dom-helpers "^0.5.3"
     jquery "^3.2.1"
