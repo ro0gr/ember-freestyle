@@ -8,8 +8,8 @@ let variantKeys = A(['normal', 'special', 'hyper', 'classic', 'elegant', 'tastef
 module('Acceptance | collection navigation', function(hooks) {
   setupApplicationTest(hooks);
 
-  hooks.beforeEach(function() {
-    freestyleGuide.visit();
+  hooks.beforeEach(async function() {
+    await freestyleGuide.visit();
   });
 
   test('verifying variantListItem selection', function(assert) {
