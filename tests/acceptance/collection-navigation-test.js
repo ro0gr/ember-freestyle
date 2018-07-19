@@ -12,13 +12,16 @@ module('Acceptance | collection navigation', function(hooks) {
     await freestyleGuide.visit();
   });
 
-  test('verifying variantListItem selection', function(assert) {
+  test('verifying variantListItem selection', async function(assert) {
     assert.expect(36);
 
     let fooCollection = freestyleGuide.content.sections.objectAt(0).subsections.objectAt(0).collections.objectAt(0);
 
-    variantKeys.forEach((activeVariant, idx) => {
-      fooCollection.selectVariant(activeVariant);
+    for (let idx = 0; idx < variantKeys.length; idx++) {
+      let activeVariant = variantKeys[idx];
+
+      await fooCollection.selectVariant(activeVariant);
+
       assert.equal(fooCollection.variants.objectAt(idx).usageTitle.toLowerCase(), activeVariant);
       variantKeys.reject((each) => {
         return each === activeVariant;
@@ -26,7 +29,6 @@ module('Acceptance | collection navigation', function(hooks) {
         let otherIndex = variantKeys.indexOf(otherVariant);
         assert.equal(fooCollection.variants.objectAt(otherIndex).text, '');
       });
-    });
-
+    }
   });
 });
