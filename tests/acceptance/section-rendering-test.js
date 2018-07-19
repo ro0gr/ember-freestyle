@@ -9,7 +9,7 @@ module('Acceptance | section rendering', function(hooks) {
     freestyleGuide.visit();
   });
 
-  test('verifying guide sections', (assert) => {
+  test('verifying guide sections', function(assert) {
     assert.expect(4);
     assert.equal(freestyleGuide.content.sections.length, 3);
     assert.equal(freestyleGuide.content.sections.objectAt(0).text, 'Foo Things');
@@ -17,7 +17,7 @@ module('Acceptance | section rendering', function(hooks) {
     assert.equal(freestyleGuide.content.sections.objectAt(2).text, 'Visual Style');
   });
 
-  test('verifying guide subsections', (assert) => {
+  test('verifying guide subsections', function(assert) {
     assert.expect(6);
     let sectionFooThings = freestyleGuide.content.sections.objectAt(0);
     assert.equal(sectionFooThings.subsections.length, 2);
@@ -30,7 +30,7 @@ module('Acceptance | section rendering', function(hooks) {
     assert.equal(sectionVisualStyle.subsections.objectAt(1).text, 'Color');
   });
 
-  test('freestyle notes show up', (assert) => {
+  test('freestyle notes show up', function(assert) {
     assert.expect(1);
     let sectionFooThings = freestyleGuide.content.sections.objectAt(0);
     let note = sectionFooThings.subsections.objectAt(0).collections.objectAt(0).variants.objectAt(0).noteContent[1];

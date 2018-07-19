@@ -17,7 +17,7 @@ module('Acceptance | dynamic', function(hooks) {
     freestyleDynamic.visit();
   });
 
-  test('block content', (assert) => {
+  test('block content', function(assert) {
     assert.expect(8);
     assert.strictEqual(
       freestyleDynamic.blockContentInputValue,
@@ -63,7 +63,7 @@ module('Acceptance | dynamic', function(hooks) {
     );
   });
 
-  test('select input', (assert) => {
+  test('select input', function(assert) {
     assert.expect(5);
     assert.strictEqual(
       freestyleDynamic.selectInputValue,
@@ -91,7 +91,7 @@ module('Acceptance | dynamic', function(hooks) {
     );
   });
 
-  test('number input', (assert) => {
+  test('number input', function(assert) {
     assert.expect(5);
     assert.strictEqual(
       freestyleDynamic.numberInputValue,
@@ -121,7 +121,7 @@ module('Acceptance | dynamic', function(hooks) {
     );
   });
 
-  test('checkbox input', (assert) => {
+  test('checkbox input', function(assert) {
     assert.expect(5);
     assert.strictEqual(
       freestyleDynamic.checkboxInputValue,

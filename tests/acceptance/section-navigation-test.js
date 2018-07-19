@@ -9,13 +9,13 @@ module('Acceptance | section navigation', function(hooks) {
     freestyleGuide.visit();
   });
 
-  test('verifying header', (assert) => {
+  test('verifying header', function(assert) {
     assert.expect(2);
     assert.equal(freestyleGuide.header.title, 'Ember Freestyle');
     assert.equal(freestyleGuide.header.subtitle, 'Living Style Guide');
   });
 
-  test('verifying menu sections', (assert) => {
+  test('verifying menu sections', function(assert) {
     assert.expect(5);
     assert.equal(freestyleGuide.menu.sections.length, 4);
     assert.equal(freestyleGuide.menu.sections.objectAt(0).text, 'All');

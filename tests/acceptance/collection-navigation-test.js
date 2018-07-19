@@ -12,7 +12,7 @@ module('Acceptance | collection navigation', function(hooks) {
     freestyleGuide.visit();
   });
 
-  test('verifying variantListItem selection', (assert) => {
+  test('verifying variantListItem selection', function(assert) {
     assert.expect(36);
 
     let fooCollection = freestyleGuide.content.sections.objectAt(0).subsections.objectAt(0).collections.objectAt(0);
